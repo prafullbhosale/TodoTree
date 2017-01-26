@@ -1,0 +1,30 @@
+@model TodoModels.Models.TodoNodeParentMap
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TodoNodeParentMap</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentNode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ParentNode.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TodoNode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TodoNode.Title)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TodoNodeParentMapId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
